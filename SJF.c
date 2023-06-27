@@ -10,7 +10,7 @@ int main(){
         printf("\np%d: ", i);
         scanf("%d", &bt[i]);
         for(i = 0;i<n-1;i++){
-            for(j=i+1;j<n;j++){
+            for(j=i;j<n;j++){
                 if(bt[i]>bt[j]){
                     temp=bt[i];
                     bt[i]=bt[j];
