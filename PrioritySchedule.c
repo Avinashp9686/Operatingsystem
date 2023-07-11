@@ -93,3 +93,35 @@ process[i].waiting_time, process[i].turn_around_time);
  printf("\n Average Turnaround Time: %f\n", average_turnaround_time);
  return 0;
 }
+
+/*
+Enter the total number of Processes: 3
+
+Please Enter the Burst Time and Priority of each process:
+
+Enter the details of the process A 
+Enter the burst time: 3
+Enter the priority: 3
+
+Enter the details of the process B 
+Enter the burst time: 4
+Enter the priority: 1
+
+Enter the details of the process C 
+Enter the burst time: 2
+Enter the priority: 1
+
+
+Process_name     Burst Time      Waiting Time    Turnaround Time
+------------------------------------------------------------
+         A               3               0               3
+-----------------------------------------------------------
+         B               4               3               7
+-----------------------------------------------------------
+         C               2               7               9
+-----------------------------------------------------------
+
+
+ Average Waiting Time : 3.333333
+ Average Turnaround Time: 6.333333
+*/

@@ -76,3 +76,31 @@ processes[i]=i+1;
 } 
 sjf(processes,n,burst_time,arrival_time); 
 } 
+//output:
+/*1.Producer
+2.Consumer
+3.Exit
+Enter ur choice:1
+
+Producer produces the item 1
+Enter ur choice:1
+
+Producer produces the item 2
+Enter ur choice:1
+
+Producer produces the item 3
+Enter ur choice:1
+Buffer is full!!
+Enter ur choice:2
+
+Consumer consumes item 3
+Enter ur choice:2
+
+Consumer consumes item 2
+Enter ur choice:2
+
+Consumer consumes item 1
+Enter ur choice:2
+Buffer is empty!!
+Enter ur choice:3
+*/

@@ -26,3 +26,13 @@ int main(){
     }
     return 0;
 }
+
+/*
+child process:Hello,i'm the child!
+child process:My pid is 12784
+child process :My parent's pid is 12783
+Parent process:Hello,I'm the parent!
+Parent process:My pid is 12783
+Parent process:My child's pid is 12784
+Parent process:child process terminated abnormally
+*/

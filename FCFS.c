@@ -32,3 +32,17 @@ int main(){
     printf("\nAverage Waiting time: %f", (float)totwt/n);
     printf("\nAverage Turn Around Time: %f\n",(float)tottat/n);
 }
+
+/*
+Enter the number of processes: 3
+Enter the process Name,Arrival Time &burst time:a 2 3
+Enter the process Name,Arrival Time &burst time:b 5 6
+Enter the process Name,Arrival Time &burst time:c 6 7
+
+PName   Arrtime Burtime start   TAT Finish
+a            2       3       2       3       5
+b            5       6       5       6      11
+c            6       7      11      12      18
+Average Waiting time: 1.666667
+Average Turn Around Time: 7.000000
+*/
