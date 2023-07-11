@@ -64,7 +64,7 @@ i++;
  printf("\n Average Turn Around Time: \t%f", avg_wt); 
  printf("\n Average Waiting Time: \t%f", avg_tat); 
  }
-
+//output:
  /*
   Total number of process in the system: 3
 
