@@ -3,7 +3,7 @@
 
 int checkHit(int incomingPage, int queue[], int occupied){
     for(int i=0;i<occupied;i++){
-        if(incomingPage == queue)
+        if(incomingPage == queue[i])
             return 1;
     }
     return 0;
@@ -11,18 +11,19 @@ int checkHit(int incomingPage, int queue[], int occupied){
 
 void printFrame(int queue[], int occupied){
     for(int i=0;i<occupied;i++)
-        printf("%d\t\t\t", queue[i]);
+        printf("%d\t", queue[i]);
 }
 int main(){
+    int incomingStream[] = {1,2,3,2,1,5,2,1,6,2,5,6,3,1,3};
     int n = sizeof(incomingStream)/sizeof(incomingStream[0]);
-    in frames = 3;
+    int frames = 3;
     int queue[n];
     int distance[n];
     int occupied = 0;
     int pagefault = 0;
     printf("Page\tFrame1\tFrame2\tFrame3\n");
     for(int i =0;i<n;i++){
-        printf("%d: \t\t", incomingStream[i]);
+        printf("%d: \t", incomingStream[i]);
         if(checkHit(incomingStream[i],queue, occupied))
             printFrame(queue, occupied);
         else if(occupied < frames){
@@ -51,6 +52,25 @@ int main(){
         }
         printf("\n");
     }
-    printf("Pafe Fault: %d", pagefault);
+    printf("Page Fault: %d\n", pagefault);
     return 0;
 }
+/*
+OUTPUT:
+Page    Frame1  Frame2  Frame3
+1:      1
+2:      1       2
+3:      1       2       3
+2:      1       2       3
+1:      1       2       3
+5:      1       2       5
+2:      1       2       5
+1:      1       2       5
+6:      1       2       6
+2:      1       2       6
+5:      5       2       6
+6:      5       2       6
+3:      5       3       6
+1:      1       3       6
+3:      1       3       6
+*/
